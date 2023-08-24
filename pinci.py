@@ -2,22 +2,12 @@ picnicItems = {'sandwiches': 4, 'apples': 12, 'cups': 4, 'cookies': 8000}
 title = 'PICNIC ITEMS'
 
 
-def picnic_function():
-    print(title.center(17, '-'))
+def picnic_function(titleextensions, itemExtensions, valueExtensions):
+    print(title.center(titleextensions, '-'))
     for item in picnicItems.keys():
-        values = str(picnicItems[item])
-        key = item
-        print(f'{key.ljust(12, ".")}   {values.rjust(4, " ")}')
+        print(f'{item.ljust(itemExtensions, ".")}   {str(picnicItems[item]).rjust(valueExtensions, " ")}')
 
 
-def picnic_fun2():
-    print(title.center(28, '-'))
-    for item in picnicItems.keys():
-        values = str(picnicItems[item])
-        key = item
-        print(f'{key.ljust(20, ".")}  {values.rjust(4, " ")}')
-
-
-picnic_function()
+picnic_function(17, 12, 4)
 print('\n')
-picnic_fun2()
+picnic_function(28, 20, 4)
